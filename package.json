@@ -10,7 +10,7 @@
     "devHotLoader": "PORT=3200 npm run buildHotLoader && NODE_ENV=devhotloader node server/index.js",
     "build": "webpack --progress --colors --config ./webpack/webpack.config.js",
     "prodBuild": "NODE_ENV=production webpack --progress --colors --config ./webpack/webpack.config.js",
-    // UV_THREADPOOL_SIZE=100 fix for https://github.com/jtangelder/sass-loader/issues/100
+    "//": "UV_THREADPOOL_SIZE=100 fix for https://github.com/jtangelder/sass-loader/issues/100",
     "buildHotLoader": "UV_THREADPOOL_SIZE=100 webpack --progress --colors --config ./webpack/webpack-hot-dev-server.config.js",
     "watch": "webpack --watch --progress --config ./webpack/webpack.config.js",
     "watchHotLoader": "webpack --watch --progress --config ./webpack/webpack-hot-dev-server.config.js",
