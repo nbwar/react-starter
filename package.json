@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-node",
+  "name": "react-starter",
   "version": "1.2.0",
   "description": "A simple Node.js app using Express 4 with Webpack, React, alt, ImmutableJS",
   "repository": "https://github.com/choonkending/react-webpack-node",
