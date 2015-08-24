@@ -1,5 +1,5 @@
 import React from 'react';
-import Route from 'react-router';
+import {Route, Redirect} from 'react-router';
 
 import App from 'components/App';
 import Vote from 'components/Vote';
@@ -23,5 +23,6 @@ export default (
     <Route path="logout" component={Logout} />
     <Route path="dashboard" component={Dashboard} onEnter={requireAuth} />
     <Route path="about" component={About} />
+    <Redirect from="*" to="/" />
   </Route>
 );

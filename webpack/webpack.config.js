@@ -22,8 +22,9 @@ var commonLoaders = [
     loader: "babel-loader?stage=0",
     include: path.join(__dirname, "..",  "app")
   },
-  { test: /\.png$/, loader: "url-loader" },
-  { test: /\.jpg$/, loader: "file-loader" },
+  { test: /\.ico$/, loader: "file-loader?name=[name].[ext]" },
+  { test: /\.png$/, loader: "file-loader?name=[path][name].[ext]" },
+  { test: /\.jpg$/, loader: "file-loader?name=[path][name].[ext]" },
   { test: /\.html$/, loader: "html-loader" },
   { test: /\.scss$/,
     loader: ExtractTextPlugin.extract('style', 'css?module&localIdentName=[local]__[hash:base64:5]' +
@@ -63,7 +64,7 @@ module.exports = [
       // The output directory as absolute path
       path: assetsPath,
       // The filename of the entry chunk as relative path inside the output.path directory
-      filename: "[hash].bundle.js",
+      filename: "[name].bundle.js",
       // The output path from the view of the Javascript
       publicPath: publicPath
 
