@@ -7,7 +7,7 @@
   "scripts": {
     "start": "./bin/start.sh",
     "dev": "PORT=3200 NODE_ENV=development node server/index.js",
-    "devHotLoader": "PORT=3200 npm run buildHotLoader && NODE_ENV=devhotloader node server/index.js",
+    "devHotLoader": "npm run buildHotLoader && PORT=3200 UV_THREADPOOL_SIZE=100 NODE_ENV=devhotloader node server/index.js",
     "build": "webpack --progress --colors --config ./webpack/webpack.config.js",
     "prodBuild": "NODE_ENV=production webpack --progress --colors --config ./webpack/webpack.config.js",
     "//": "UV_THREADPOOL_SIZE=100 fix for https://github.com/jtangelder/sass-loader/issues/100",
