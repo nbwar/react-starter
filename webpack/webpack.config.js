@@ -30,7 +30,9 @@ var commonLoaders = [
     loader: ExtractTextPlugin.extract('style', 'css?module&localIdentName=[local]__[hash:base64:5]' +
       '&sourceMap!autoprefixer-loader!sass?sourceMap&outputStyle=expanded' +
       '&includePaths[]=' + (path.resolve(__dirname, '../node_modules')))
-  }
+  },
+  { test: /\.css$/, loader: ExtractTextPlugin.extract('style', 'css!autoprefixer') }
+
 ];
 
 module.exports = [
